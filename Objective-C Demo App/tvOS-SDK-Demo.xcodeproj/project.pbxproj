@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1D6DA1381BFBF6B600E71464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D6DA1371BFBF6B600E71464 /* Assets.xcassets */; };
 		1DC418671BFBD7CD009B7171 /* ALDemoRewardedVideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC418661BFBD7CD009B7171 /* ALDemoRewardedVideosViewController.m */; };
+		6531698A22275415009852E5 /* Amplitude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6531698922275415009852E5 /* Amplitude.framework */; };
+		6531698D22275726009852E5 /* Amplitude.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6531698922275415009852E5 /* Amplitude.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E940351B1BF6890B00966A1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E940351A1BF6890B00966A1C /* main.m */; };
 		E940351E1BF6890B00966A1C /* ALDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E940351D1BF6890B00966A1C /* ALDemoAppDelegate.m */; };
 		E94035241BF6890B00966A1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94035221BF6890B00966A1C /* Main.storyboard */; };
@@ -26,10 +28,24 @@
 		E940357A1BF6C7B200966A1C /* ALDemoInterstitialSingleInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94035791BF6C7B200966A1C /* ALDemoInterstitialSingleInstanceViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6531698C22275713009852E5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6531698D22275726009852E5 /* Amplitude.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D6DA1371BFBF6B600E71464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DC418651BFBD7CD009B7171 /* ALDemoRewardedVideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDemoRewardedVideosViewController.h; sourceTree = "<group>"; };
 		1DC418661BFBD7CD009B7171 /* ALDemoRewardedVideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDemoRewardedVideosViewController.m; sourceTree = "<group>"; };
+		6531698922275415009852E5 /* Amplitude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Amplitude.framework; path = Carthage/Build/tvOS/Amplitude.framework; sourceTree = SOURCE_ROOT; };
 		E94035161BF6890B00966A1C /* tvOS-SDK-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS-SDK-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E940351A1BF6890B00966A1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E940351C1BF6890B00966A1C /* ALDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDemoAppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6531698A22275415009852E5 /* Amplitude.framework in Frameworks */,
 				E94035591BF6A6EE00966A1C /* AdSupport.framework in Frameworks */,
 				E940355A1BF6A6EE00966A1C /* AVFoundation.framework in Frameworks */,
 				E940355B1BF6A6EE00966A1C /* CoreGraphics.framework in Frameworks */,
@@ -167,6 +184,7 @@
 		E94035621BF6A7B700966A1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6531698922275415009852E5 /* Amplitude.framework */,
 				E94035501BF6A6EE00966A1C /* AdSupport.framework */,
 				E94035511BF6A6EE00966A1C /* AVFoundation.framework */,
 				E94035521BF6A6EE00966A1C /* CoreGraphics.framework */,
@@ -218,6 +236,8 @@
 				E94035121BF6890B00966A1C /* Sources */,
 				E94035131BF6890B00966A1C /* Frameworks */,
 				E94035141BF6890B00966A1C /* Resources */,
+				6531698B2227541D009852E5 /* ShellScript */,
+				6531698C22275713009852E5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -234,7 +254,7 @@
 		E940350E1BF6890B00966A1C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = AppLovin;
 				TargetAttributes = {
 					E94035151BF6890B00966A1C = {
@@ -271,6 +291,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6531698B2227541D009852E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Amplitude.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Amplitude.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E94035121BF6890B00966A1C /* Sources */ = {
@@ -310,13 +352,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -353,13 +405,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -388,6 +450,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "tvOS-SDK-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -409,6 +475,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchScreen;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "tvOS-SDK-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

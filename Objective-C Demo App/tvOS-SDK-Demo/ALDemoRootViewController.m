@@ -7,14 +7,15 @@
 //
 
 #import "ALDemoRootViewController.h"
-#import "ALSdk.h"
+#import <Amplitude/Amplitude.h>
+//#import "ALSdk.h"
 
 @implementation ALDemoRootViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [[Amplitude instance] logEvent:@"View Root"];
     self.title = @"";
     
     UIImageView *logo = [[UIImageView alloc] initWithFrame: CGRectMake(0.0f, 0.0f, 340.0f, 100.0f)];
@@ -34,9 +35,10 @@
     footer.numberOfLines = 0;
     
     NSString *appVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
-    NSString *sdkVersion = [ALSdk version];
+//    NSString *sdkVersion = [ALSdk version];
     NSString *sdkKey = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"AppLovinSdkKey"];
-    NSString *text = [NSString stringWithFormat: @"App Version: %@\nSDK Version: %@\nLanguage: Objective-C\n\nSDK Key: %@", appVersion, sdkVersion, sdkKey];
+//    NSString *text = [NSString stringWithFormat: @"App Version: %@\nSDK Version: %@\nLanguage: Objective-C\n\nSDK Key: %@", appVersion, sdkVersion, sdkKey];
+    NSString *text = @"This is a test";
     
     NSMutableParagraphStyle *style  = [[NSMutableParagraphStyle alloc] init];
     style.alignment =  NSTextAlignmentCenter;

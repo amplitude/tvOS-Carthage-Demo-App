@@ -7,14 +7,19 @@
 //
 
 #import "ALDemoAppDelegate.h"
-#import "ALSdk.h"
+#import <Amplitude/Amplitude.h>
+//#import "ALSdk.h"
 
 @implementation ALDemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Initializing our SDK at launch is very important as it'll start preloading ads in the background.
-    [ALSdk initializeSdk];
+//    [ALSdk initializeSdk];
+    
+    [[Amplitude instance] initializeApiKey:@"5991e74feae44012f071fae1383099e8"];
+    [[Amplitude instance] setTrackingSessionEvents:YES];
+    [[Amplitude instance] setMinTimeBetweenSessionsMillis:5000];
     
     [[UINavigationBar appearance] setTranslucent: NO];
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed: 10.0f/255.0f green: 131.0f/255.f blue: 170.0f/255.0f alpha: 1.0f]];
